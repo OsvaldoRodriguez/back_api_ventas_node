@@ -1,0 +1,20 @@
+POST http://127.0.0.1:3000/api/auth/login 
+Accept: application/json
+Content-Type: application/json
+{
+    "email": "osvaldo@gmail.com",
+    "password": "nose"
+}
+
+
+### Registro usuario
+
+POST http://127.0.0.1:3000/api/auth/register
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name" : "Fury",
+    "email": "osvaldo@gmail.com",
+    "password": "noseFury"
+}
