@@ -33,8 +33,9 @@ export default {
       // dura 1 hora
       const token = jwt.sign(payload, "MI_CODIGO_SECRETO", {
         // tipo de algoritmo a manejar
-        expiresIn: 3600,
+        expiresIn: 30,
       });
+      // console.log('token: ' + token);
       return res
         .status(200)
         .json({
@@ -70,7 +71,10 @@ export default {
 
   },
 
-  perfil(req, res) {},
+  perfil(req, res) {
+
+    return res.status(200).json({mensaje : "todo okis", user : req.user})
+  },
 
   logout(req, res) {},
 };
