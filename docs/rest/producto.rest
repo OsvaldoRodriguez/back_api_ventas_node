@@ -1,0 +1,16 @@
+GET http://127.0.0.1:3000/api/v1/producto?page=1&limit=10&q=&categoria_id=2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJvc3ZhbGRvQGdtYWlsLmNvbSIsInRpbWUiOiIyMDIzLTA0LTA2VDAyOjM3OjE4LjcxM1oiLCJpYXQiOjE2ODA3NDg2MzgsImV4cCI6MTY4MDc1MjIzOH0.FIc6YtsWWLb3T-fIOAfqzeGTd4bexB2CCe6XiA2g0cI
+### guardar producto
+
+POST http://127.0.0.1:3000/api/v1/producto
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJvc3ZhbGRvQGdtYWlsLmNvbSIsInRpbWUiOiIyMDIzLTA0LTA2VDAzOjI4OjAxLjg3MVoiLCJpYXQiOjE2ODA3NTE2ODEsImV4cCI6MTY4MDc1NTI4MX0.tGEB31fukrfUpmSY0t_GM-VhAzxqE-yRGt1mUxdbMdU
+Content-Type: : application/json
+
+{
+    "nombre" : "Silla",
+    "precio" : 123,
+    "stock" : 1,
+    "descripcion" : "sillita  bonita",
+    "categoriaId" : 1
+}
+

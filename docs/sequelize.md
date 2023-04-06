@@ -26,3 +26,8 @@ npx sequelize-cli model:generate --name PedidoProducto --attributes pedidoId:int
 ```
 
 
+
+
+
+# helPER PARA RESPUESTAS
+https://dev.to/nedsoft/central-error-handling-in-express-3aej

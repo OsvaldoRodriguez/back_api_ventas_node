@@ -1,0 +1,28 @@
+
+# GET http://127.0.0.1:3000/api/v1/categoria
+
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJvc3ZhbGRvQGdtYWlsLmNvbSIsInRpbWUiOiIyMDIzLTA0LTA2VDAxOjMwOjA2Ljk3MloiLCJpYXQiOjE2ODA3NDQ2MDYsImV4cCI6MTY4MDc0ODIwNn0._EK7Xca7PMpjUYl_3BbdHzTs5vBAdBIh26tkYsRc1ic
+
+
+
+
+# para guardar 
+
+POST http://127.0.0.1:3000/api/v1/categoria
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJvc3ZhbGRvQGdtYWlsLmNvbSIsInRpbWUiOiIyMDIzLTA0LTA2VDAxOjMwOjA2Ljk3MloiLCJpYXQiOjE2ODA3NDQ2MDYsImV4cCI6MTY4MDc0ODIwNn0._EK7Xca7PMpjUYl_3BbdHzTs5vBAdBIh26tkYsRc1ic
+
+{
+    "nombre" : "h",
+    "detalle" : "COCINAS para oficinas"
+}
+
+# # # mostar por id
+
+# # GET http://127.0.0.1:3000/api/v1/categoria/1
+# # Accept: application/json
+# # Content-Type: application/json
+# # Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJvc3ZhbGRvQGdtYWlsLmNvbSIsInRpbWUiOiIyMDIzLTA0LTA1VDAyOjI4OjE5Ljg1NVoiLCJpYXQiOjE2ODA2NjE2OTksImV4cCI6MTY4MDY2NTI5OX0.L8KLJ04BizNrEJqbKT3oHu6p95WzAT34CqO1qARsbVk
+
+# # {
+# # }

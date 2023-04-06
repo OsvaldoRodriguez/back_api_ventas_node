@@ -33,7 +33,7 @@ export default {
       // dura 1 hora
       const token = jwt.sign(payload, "MI_CODIGO_SECRETO", {
         // tipo de algoritmo a manejar
-        expiresIn: 30,
+        expiresIn: 60*60,
       });
       // console.log('token: ' + token);
       return res
