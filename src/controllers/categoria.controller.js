@@ -3,7 +3,7 @@ import models from "./../database/models/index";
 export default {
   listar: async (req, res) => {
     const categorias = await models.Categoria.findAll({});
-    return res.status(200).json({ mensaje: "lista", body: categorias });
+    return res.status(200).json(categorias);
   },
   guardar: async (req, res) => {
     try {
@@ -14,7 +14,7 @@ export default {
       });
       return res
         .status(201)
-        .json({ mensaje: "Categoria registrada", body: { nombre, detalle } });
+        .json({ nombre, detalle});
     } catch (error) {
       return res
       .status(422)
@@ -32,15 +32,21 @@ export default {
     }
     // si existe
 
-    return res.status(200).json({ mensaje: "Todo Ok", body: categoria });
+    return res.status(200).json(categoria);
   },
   modificar: async (req, res) => {
     const id = req.params.id;
-    const cat = await models.Categoria.findByPk({});
+    const {nombre, detalle} = req.body;
+    const cat = await models.Categoria.findByPk(id);
 
     if (cat) {
-
-        await models.Categoria.findByIdAndUpdate(cat.id, {});
+        await models.Categoria.update(
+          {nombre, detalle }, {
+            where : {
+              id : cat.id
+            }
+          }
+        );
       return res
         .status(200)
         .json({ mensaje: "Categoria actualizada"});
@@ -50,13 +56,14 @@ export default {
       .json({ mensaje: "Ocurro un error al registrar la categoria" });
   },
   eliminar: async (req, res) => {
-    // investigar paranoId (no eliina de verdad)
-    const id = req.params.id;
+    const id = req.params.id
+    console.log("data base, " + id);
     await models.Categoria.destroy({
-        where : {
-            id : id
+        where: {
+            id: id
         },
-        force : true
     });
-  },
+    return res.status(200).json({ message: "categoria Eliminada" })
+
+}
 };
