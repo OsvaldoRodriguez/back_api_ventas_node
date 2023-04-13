@@ -2,6 +2,7 @@ import jwt from "jsonwebtoken";
 
 // next -> deja pasar o no deja pasar
 export const auth = function (req, res, next) {
+  console.log("tenemos que verificar token");
   let token = null;
   // esa variable tiene el token
   if (req.headers.authorization) {
@@ -9,7 +10,7 @@ export const auth = function (req, res, next) {
     // entonces con split se halla el token
     token = req.headers.authorization.split(" ")[1];
   }
-
+  console.log(token + " llega token");
   if (!token) {
     return res
       .status(401)

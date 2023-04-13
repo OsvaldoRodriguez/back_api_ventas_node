@@ -31,3 +31,11 @@ npx sequelize-cli model:generate --name PedidoProducto --attributes pedidoId:int
 
 # helPER PARA RESPUESTAS
 https://dev.to/nedsoft/central-error-handling-in-express-3aej
+
+
+# para  instalar multer para imagenes
+
+npm install --save multer
+
+# link 
+https://www.npmjs.com/package/multer

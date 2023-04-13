@@ -3,9 +3,10 @@ import models from "../database/models/index";
 export default {
   listar: async (req, res) => {
     try {
+      console.log("esta llegando");
       //api/producto?q=tec&page=2&limit=10&categoria_id
       let q = req.query.q;
-      let cad_id = req.query.categoria_id;
+      // let cad_id = req.query.categoria_id;
       let page = parseInt(req.query.page);
       let limit = parseInt(req.query.limit);
 
@@ -17,14 +18,14 @@ export default {
           nombre: {
             [Op.like]: `%${q}%`,
           },
-          categoriaId: cad_id,
+          // categoriaId: cad_id,
         },
         offset: offset, // a partir de  esta posicion
         limit: limit, // se quiere limit datos
         // dos datos a partir de 10
         include: [models.Categoria],
       });
-      return res.status(200).json({ mensaje: "lista", body: productos });
+      return res.status(200).json(productos);
     } catch (error) {
       return res.status(500).json({ mensaje: "Error al listar" });
     }
