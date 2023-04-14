@@ -8,6 +8,9 @@ app.use(cors());
 app.use(express.json()); // para capturar datos en formato json -> para usar req.body
 app.use(express.urlencoded({extended : true}) ) // para recibir por url encoded (peticion post)
 // habilitando rutas
+
+// para las imagenes es
+app.use(express.static('public'));
 app.use('/api', RouteAuth);
 app.use('/api/v1', RouteAdmin);
 app.listen(3000, () =>{
